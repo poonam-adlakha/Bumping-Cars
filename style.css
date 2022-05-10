@@ -1,0 +1,368 @@
+:root {
+    --carLeft: #5fb73f;
+    --carRight: #f03211;
+    --carBase: #242123;
+    --headLights: #e59d16;
+    --headLightsR: #28b5fc;
+    --carTop: #f1287c;
+    --carTopR: #28e0f1;
+    --tailLight: #5ebef5;
+    --tailLightR: #fbbf02;
+    --tailShadow:#e22f6c;
+    --tailColor: #7b7879;
+    --tailEnd: #ac5271;
+    --seat: #434343;
+    --face: #fbcd64;
+}
+body {
+    background: linear-gradient(to bottom, #f9eed2, #f4daa9);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.leftCar{
+    position: absolute;
+    display: block;
+    animation: moveLeft 1s ease-in-out infinite;
+}
+
+.rightCar {
+    position: absolute;
+    display: block;
+    animation: moveRight 1s ease-in-out infinite;
+}
+
+#carBodyL, #carBodyR {
+    position: absolute;
+    display: block;
+    width: 8.5em;
+    height: 2em;
+    border-radius: 0% 0% 25% 25%;
+    z-index: 5;
+}
+
+#carBodyL {
+    background: var(--carLeft);
+    transform: translate(-130%, 970%);
+}
+
+#carBodyR {
+    transform: translate(40%, 970%);
+    background: var(--carRight);
+}
+
+#carBackL, #carBackR {
+    position: absolute;
+    display: block;
+    width: 2em;
+    height: 3.7em;
+    z-index: 4;
+}
+
+#carBackL {
+    background: var(--carLeft);
+    transform: translate(-465%, 430%);
+    border-radius: 70% 20% 30% 10%;
+    border-right: var(--carTop) solid 6px;
+}
+
+#carBackR {
+    background: var(--carRight);
+    transform: translate(400%, 435%);
+    border-radius: 20% 70% 10% 30%;
+    border-left: var(--carTopR) solid 6px;
+}
+
+
+#carFrontL, #carFrontR {
+    position:absolute;
+    display: block;
+    width: 2.7em;
+    height: 2.6em;
+    z-index: 6;
+}
+
+#carFrontL {
+    background: var(--carLeft);
+    transform: translate(-182%, 650%);
+    border-radius: 10% 80% 0% 0%;
+    border-left: var(--carTop) solid 6px;
+}
+
+#carFrontR {
+    background: var(--carRight);
+    transform: translate(110%, 650%);
+    border-radius: 80% 10% 0% 0%;
+    border-right: var(--carTopR) solid 6px;
+}
+
+
+#carBaseL, #carBaseR {
+    position:absolute;
+    display: block;
+    width: 9.5em;
+    height: 0.7em;
+    border-radius: 10em;
+    z-index: 6;
+}
+
+#carBaseL {
+    background: linear-gradient(#911d57, var(--carTop));
+    border: #911d57 solid 1px;
+    transform: translate(-120%, 2540%);
+    box-shadow: -1px 2px var(--carTop);
+}
+
+#carBaseR {
+    background: linear-gradient(#1d2e91, var(--carTopR));
+    transform: translate(32%, 3000%);
+    box-shadow: -1px 2px var(--carTopR);
+}
+
+#headLight1L, #headLight1R {
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    border: #242321 1px solid;
+    border-radius: 50%;
+    z-index: 6;
+}
+
+#headLight1L {
+    background: var(--headLights);
+    transform: translate(-350%, 1730%);
+    box-shadow: -3px 1px #e27d7d;
+}
+
+#headLight1R {
+    background: var(--headLightsR);
+    transform: translate(330%, 1730%);
+    box-shadow: 3px 1px #dcd3d3;
+}
+
+#carTopL, #carTopR {
+    position: absolute;
+    display: block;
+    width: 4.2em;
+    height: 0.5em;
+    z-index: 3;
+}
+
+#carTopL {
+    background: var(--carTop);
+    transform: translate(-230%, 3800%);
+    border-radius: 50% 70% 0% 0%;
+}
+
+#carTopR {
+    background: var(--carTopR);
+    transform: translate(150%, 3800%);
+    border-radius: 70% 50% 0% 0%;
+}
+
+
+#tailLamp1L, #tailLamp1R {
+    position: absolute;
+    display: block;
+    width: 1.3em;
+    height: 0.5em;
+    z-index: 6;
+    border-radius: 1em;
+}
+
+#tailLamp1L {
+    background: var(--tailLight);
+    transform: translate(-870%, 4000%);
+    box-shadow: -3px 2px var(--tailShadow);
+}
+
+#tailLamp1R {
+    background: var(--tailLightR);
+    transform: translate(840%, 4000%);
+    box-shadow: 3px 2px var(--carTopR);
+}
+
+#tailL, #tailR {
+    position: absolute;
+    display: block;
+    width: 0.2em;
+    height: 9em;
+    background: var(--tailColor);
+}
+
+#tailL {
+    transform: translate(-5400%, 90%);
+}
+
+#tailR {
+    transform: translate(5400%, 90%);
+}
+
+#tailEndL, #tailEndR {
+    position: absolute;
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background: var(--tailEnd);
+    border-radius: 50%;
+}
+
+#tailEndL {
+    transform: translate(-2195%, 1600%);
+}
+
+#tailEndR {
+    transform: translate(2120%, 1600%);
+}
+
+#seatTopL, #seatTopR {
+    position: absolute;
+    display: block;
+    width: 0.7em;
+    height: 3em;
+    background: var(--seat);
+    z-index: 2;
+}
+
+#seatTopL {
+    transform: translate(-1250%, 550%);
+    border-radius: 0% 70% 0% 0%;
+}
+
+#seatTopR {
+    transform: translate(1260%, 550%);
+    border-radius: 70% 0% 0% 0%;
+}
+
+#steeringBottomL, #steeringBottomR {
+    position: absolute;
+    display: block;
+    width: 0.4em;
+    height: 1em;
+    background: var(--carBase);
+    z-index: 4;
+}
+
+#steeringBottomL {
+    transform: translate(-1500%, 1800%) rotate(-60deg);
+}
+
+#steeringBottomR {
+    transform: translate(1600%, 1800%) rotate(60deg);
+}
+
+#steeringTopL, #steeringTopR {
+    position: absolute;
+    display: block;
+    width: 0.5em;
+    height: 0.9em;
+    border-radius: 50%;
+    background: var(--carBase);
+
+}
+
+#steeringTopL {
+    transform: translate(-1300%, 1970%) rotate(20deg);
+}
+
+#steeringTopR {
+    transform: translate(1350%, 1980%) rotate(-20deg);
+}
+
+#faceL, #faceR {
+    position: absolute;
+    display: block;
+    width: 1.7em;
+    height: 1.7em;
+    background: var(--face);
+    border-radius: 50%;
+    z-index: 7;
+    border-top: var(--carBase) solid 5px;
+}
+
+#faceL {
+    transform: translate(-480%, 780%) rotate(-50deg);
+}
+
+#faceR {
+    transform: translate(420%, 790%) rotate(50deg);
+}
+
+#bodyL, #bodyR {
+    position: absolute;
+    display: block;
+    width: 2em;
+    height: 2.5em;
+    border-radius: 80% 80% 0% 0%;
+}
+
+#bodyL {
+    background: var(--carRight);
+    transform: translate(-420%, 690%);
+}
+
+#bodyR {
+    background: var(--carLeft);
+    transform: translate(360%, 690%);
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 50%;
+    }
+
+    20% {
+        top: 0;
+        left: 51%
+    }
+
+    50% {
+        animation-iteration-count: infinite;
+        transform: rotate(4deg);
+    }
+
+    60% {
+        animation-timing-function: ease-out;
+        left: 52%;
+        transform: rotate(6deg);
+    }
+
+    65% {
+        left: 55%;
+        transform: rotate(-4deg);
+        animation-timing-function: ease;
+    }
+
+    70% {
+        top: 53%;
+        animation-timing-function: linear;
+    }
+
+    75% {
+        left: 52%;
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        left: 50%;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes moveRight {
+    60% {
+        transform: rotate(0);
+    }
+
+    67% {
+        transform: rotate(-7deg);
+    }
+}
